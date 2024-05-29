@@ -30,7 +30,6 @@ let str2 =" world"
 
 str3= str1+str2
 // console.log(str3)
-
 // //number conversion confusing
 // console.log("1"+2)
 // console.log(1+"2")
@@ -44,6 +43,7 @@ console.log(gameCounter);
 //pre fix ++a
 //post fix  b++
 let x = 3;
+
 const y = x++;
 
 console.log(`x:${x}, y:${y}`);
