@@ -5,13 +5,16 @@ const accountId = 101;
 let accountEmail = "abc@gmail.com";
 // let is use only for scope if (condition) { scope  }
 
-var accountPassword ="1245"
+var accountPassword = "1245";
 //globelvaribles
+/* 
+    prefer not to use var
+    because of issue in block scope and functional scope
+*/
+console.log(accountId);
+let accountState ;
+accountCity = "surat ---> error ";
+// ^ not a good tecnique
+console.log(accountCity);
 
-console.log(accountId)
-
-accountCity = "surat ---> error "
-
-console.log(accountCity)
-
-console.table([accountId,accountEmail,accountPassword,accountCity])
+console.table([accountId, accountEmail, accountPassword, accountCity,accountState]);
