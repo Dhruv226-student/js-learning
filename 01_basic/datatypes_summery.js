@@ -30,3 +30,29 @@ const myFunc =function(){
 }
 
 myFunc()
+
+
+
+
+
+
+/// *******************************************************
+
+//Stack (primitive types), Heap (non-primitive types)
+let myName = "Dhruvvvvvv"
+
+let anotherName = myName
+anotherName = "krishna"
+console.log(anotherName);
+console.log(myName);
+
+
+let user ={
+    email : "abc@gamil.com",
+    age:20
+}
+let userTwo = user
+userTwo.email="df@gmail.com"
+
+console.log(user.email)
+console.log(userTwo.email)
