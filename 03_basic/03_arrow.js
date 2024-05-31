@@ -37,7 +37,7 @@ const one =()=>{
 // const addTwo=(num1,num2)=> num1 + num2  //inprsit retuen 
 
 
-console.log(addTwo(6,9))
+// console.log(addTwo(6,9))
 
 
 
