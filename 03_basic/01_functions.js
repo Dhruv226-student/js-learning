@@ -28,4 +28,34 @@ function loginInUser(username = "same") {
   return `${username} just Logged in`;
 }
 
-console.log(loginInUser());
+// console.log(loginInUser());
+
+
+// ---> rest perator ... (triple dot ) also know as splet  
+
+//multiple value pass in js
+function calculateCartPrice(...num1){ 
+    return num1
+}
+// console.log(calculateCartPrice(200,400,500)) //get a array 
+
+
+const user ={
+    username:"Dhruv",
+    prices:200
+}
+
+function handleObject(anyObj){
+
+    console.log(`UserName is ${anyObj.username} and price is ${anyObj.prices}`)
+}
+// handleObject(user)
+
+
+const myArr = [200,400,500,100]
+
+
+function returnSecondValue(getArray){
+    return getArray
+}
+console.log(returnSecondValue(myArr));
