@@ -90,6 +90,8 @@ consumePromiseFive();
 // }
 
 // getAllUser();
+
+// fetch is exicted feature in node js  
 fetch('https://jsonplaceholder.typicode.com/users')
 .then((response)=>{
     return response.json()
