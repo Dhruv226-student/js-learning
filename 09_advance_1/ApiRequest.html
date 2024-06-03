@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 100%;
+            height: 100%;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .card-img{
+            width: 100px;
+            /* height: 100px; */
+        }
+        .container{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121; color: white;">
+    <div class="card">
+
+
+    </div>
+    <button id="data">Show data</button>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/dhruv226-student'
+    const xhr = new XMLHttpRequest()
+    // console.log(xhr.readyState); ==> 0
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            //parse conver string to json
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            const card=document.querySelector(".card")
+            document.querySelector('#data').addEventListener('click',function(){
+                card.innerHTML=` 
+          
+            <img src=${data.avatar_url} class="card-img"  alt="Avatar" style="width:100%">
+<div class="container">
+<h4><b>${data.name}</b></h4>
+<p>${data.bio}</p>
+</div>
+         
+            `
+            })
+   // photo ,folowers and create card button get data 
+        }
+
+    }
+    // console.log(xhr.readyState); ==> 1
+    xhr.send()
+</script>
+
+</html>
